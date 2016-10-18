@@ -1,0 +1,2 @@
+1: 列出已经创建的topic
+./bin/kafka-topics.sh --list --zookeeper 192.168.0.215:2181/kafka
