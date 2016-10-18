@@ -1,2 +1,26 @@
 1: 列出已经创建的topic
 ./bin/kafka-topics.sh --list --zookeeper 192.168.0.215:2181/kafka
+
+2: topic详细元数据描述
+./bin/kafka-topics.sh --zookeeper 192.168.0.215:2181/kafka --describe --topic sugo
+
+3: 删除topic
+./bin/kafka-topics.sh --zookeeper 192.168.0.215:2181/kafka --delete --topic sugo
+
+4: 消费数据
+./bin/kafka-console-consumer.sh --zookeeper 192.168.0.215:2181/kafka --from-beginning --topic sugo
+
+5: 生产数据
+./bin/kafka-console-producer.sh --broker-list 192.168.0.215:9092 --topic sugo
+
+6: 创建topic
+./bin/kafka-topics.sh --create --zookeeper 192.168.0.215:2181/kafka --replication-factor 2 --partitions 2 --topic sugo
+
+7: 检查是否有不可用的partition
+./bin/kafka-topics.sh --describe --zookeeper 192.168.0.215:2181/kafka --unavailable-partitions
+
+8: 查看topic的offset(time参数值 -1=latest, -2=earliest)
+./bin/kafka-run-class.sh kafka.tools.GetOffsetShell --topic s1 --broker-list 192.168.0.215:9092 --time -1
+
+9: 指定单个partition消费数据
+./bin/kafka-run-class.sh kafka.tools.SimpleConsumerShell --broker-list 192.168.0.215:9092 --topic sugo --offset -1 --partition 0
