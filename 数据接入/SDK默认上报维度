@@ -16,8 +16,8 @@
 ['sugo_http_forward', '客户端真实IP'],          //客户端真实ip(nginx)
 ['sugo_http_refer', 'Referer'],                //Referer(nginx)
 ['sugo_user_agent', '浏览器标识'],              //浏览器标识(nginx)
-['client_brower, '浏览器名称'],  	             //浏览器名称
-['client_brower_version', '浏览器版本'],        //浏览器版本
+['brower, '浏览器名称'],  	             //浏览器名称
+['brower_version', '浏览器版本'],        //浏览器版本
 ['sugo_args', '请求参数'],                      //请求参数(nginx)
 ['sugo_http_cookie', 'HttpCookie'],            //HttpCookie(nginx)
 ['app_name', '系统名称'],                      //系统或app的系统名称
