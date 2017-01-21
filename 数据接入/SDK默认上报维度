@@ -56,5 +56,5 @@
 ['event_label', '事件源文本'],                //事件源文本
 ['sugo_lib', 'sdk类型'],                     //sdk类型 web、ios、android
 ['token', '应用ID'],                         //应用ID
-['from_binding', '是否绑定事件'],             //是否绑定事件
+['from_binding', '是否绑定事件'],             //是否绑定事件（用于区分是绑定的，还是系统自动上报的，比如浏览、启动为自动上报，绑定取值1，自动上报取值0）
 ['google_play_services', 'GooglePlay服务'],  //GooglePlay服务
