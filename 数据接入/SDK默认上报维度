@@ -30,8 +30,8 @@
 ['has_bluetooth', '蓝牙版本'],                //用户是否有蓝牙
 ['device_brand', '品牌'],                     //用户电脑、平板、或手机牌子
 ['device_model', '品牌型号'],                 //用户电脑、平板、或手机型号
-['device_agent', '浏览器/android/ios'],       //用户Browser、平板或手机OS
-['device_version', '操作系统版本'],           //用户Browser、平板或手机OS版本
+['system_name', '浏览器/android/ios'],       //用户系统、平板或手机OS
+['system_version', '操作系统版本'],           //用户平板或手机OS版本
 ['radio', '通信协议'],                       //通信协议
 ['screen_dpi', '分辨率'],                    //客户端分辨率
 ['screen_height', '屏幕高度'],               //客户端屏幕高度
