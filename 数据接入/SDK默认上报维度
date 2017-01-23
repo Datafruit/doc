@@ -33,6 +33,7 @@
 ['system_name', '浏览器/android/ios'],       //用户系统、平板或手机OS
 ['system_version', '操作系统版本'],           //用户平板或手机OS版本
 ['radio', '通信协议'],                       //通信协议
+['carrier', '运营商'],                       //运营商
 ['screen_dpi', '分辨率'],                    //客户端分辨率
 ['screen_height', '屏幕高度'],               //客户端屏幕高度
 ['screen_width', '屏幕宽度'],                //客户端屏幕宽度
