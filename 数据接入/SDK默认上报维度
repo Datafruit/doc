@@ -1,3 +1,9 @@
+/**
+ * android, ios web SDK接入默认维度类型
+ * [0=维度名称,1=维度别名,2=维度数据类型（如未设置默认string）]
+ * 维度类型：0=long,1=float,2=string;3=dateString;4=date
+ */
+
 ['__time', '服务端时间', 4],                        //服务端时间
 ['sugo_nation', '国家'],                        //用户所在国家(ip反解析)
 ['sugo_province', '省份'],                      //用户所在省份(ip反解析)
