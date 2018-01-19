@@ -1,5 +1,5 @@
 1. 编译打包  
-  ```http://192.168.0.201/jenkins/view/sit_sugo_astro-220/job/sit_sugo_astro-220/```  
+  ```http://192.168.0.212:5050/jenkins/view/sit_sugo_astro-220/job/sit_sugo_astro-220-test/```  
   点击立即构建，编译打包astro
 
 2. 等待编译打包完成后，验证打包是否成功  
