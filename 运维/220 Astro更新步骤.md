@@ -8,10 +8,15 @@
   查看安装包是否为最新的：  
 ```    ll -rt  ```  
   查看安装包时间  
+  
+3. 修改安装包包名  
+  进入界面：```192.168.0.220:8080(admin, admin)  ```   
+  点击Astro-sugo，配置，高级astro-env，修改配置项astro.package.name的值为需要安装的安装包包名，保存  
+  
 
-3. 更新astro  
+4. 更新astro  
   更新astro：  
-    进入界面：```192.168.0.220:8080(admin, admin)  ```  
+     
 	点击Astro-sugo, ASTRO CLIENTs, dev220.sugo.net, 下拉到最下方，点击已安装, ASTRO CLIENT, UPGRADE_ASTRO  
 	等待更新完即可
 	
