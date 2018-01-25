@@ -1,0 +1,16 @@
+## TASK insert后马上被remove
+
+排除步骤：
+1. 通过看overlord的Complete Tasks看有没failed的task
+2. 如果有就看失败task具体日志
+
+可能原因:
+1. task目录（对应spec的basePersistDirectory）没创建，或没有权限
+
+## df和du结果不一致
+可能原因
+部分文件被删除，但文件句柄没释放
+
+排查步骤:
+1. losf |grep deleted
+2. 是否有进程外的文件删除操作
