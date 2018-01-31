@@ -7,7 +7,7 @@
 可能原因:
 1. task目录（对应spec的basePersistDirectory）没创建，或没有权限
 
-## df和du结果不一致
+### df和du结果不一致
 可能原因
 部分文件被删除，但文件句柄没释放
 
@@ -17,12 +17,16 @@
 
 
 ### task长时间不落地处理办法
+原因：kafka client阻塞 overlord线程
+
+1. 让task落地
 找到taskId、task的ip和端口
 先发如下请求，这个post会返回'{"0":61968201}'，把这个值作为下一个请求的数据
 curl -X POST -H 'Content-Type:application/json' http://192.168.0.212:8100/druid/worker/v1/chat/lucene_index_kafka_wuxianjiRT_7e656d469ae7f8b_albdigkj/pause
 
 curl -X POST -H 'Content-Type:application/json' -d '{"0":61968201}' http://192.168.0.212:8100/druid/worker/v1/chat/lucene_index_kafka_wuxianjiRT_7e656d469ae7f8b_albdigkj/offsets/end?resume=true
 
+脚本批量处理：
 ```
 import urllib2,json
 url_temple='http://{0}/druid/worker/v1/chat/{1}/pause'
@@ -45,3 +49,5 @@ for task in tasks:
     print response.read()
 
 ```
+
+2. 处理完后更换kafka扩展包
