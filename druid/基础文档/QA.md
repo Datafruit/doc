@@ -12,8 +12,9 @@
 部分文件被删除，但文件句柄没释放
 
 排查步骤:
-1. losf |grep deleted
-2. 是否有进程外的文件删除操作
+1. lsof |grep deleted 
+2. lsof |grep DEL 
+3. 是否有进程外的文件删除操作
 
 
 ### task长时间不落地处理办法
